@@ -25,11 +25,10 @@ h2{
     margin-bottom: 8px;
     height: 40px;
     line-height: 40px;
-    padding-left: 34px;
+    padding: 0;
     font-size: 30px;
     font-weight: 600;
     color: #222;
-	margin: 10px 0px 20px 0px;
 	text-align: left;
 	width: 100%;
 	font-weight: 800;
@@ -142,6 +141,7 @@ h2{
    border-radius: 20px;
    overflow: hidden;
    background: #ecf0f3;
+   padding: 10px 30px;
 }
 
 #output {
@@ -154,7 +154,7 @@ h2{
 	flex-direction: column;
 	display: flex;
 	max-width: 500px;
-	width: 84%;
+	width: 100%;
 	text-align: end;
 	padding: 10px;
 	justify-content: center;
@@ -179,15 +179,16 @@ h2{
 }
 
 #keys {
-	background-color: #ecf0f3;
+	position: relative;
 	display: grid;
 	grid-template-columns: auto auto auto auto;
 	justify-content: center;
 	grid-column-gap: 10px;
 	height: 490px;
-	width: 100%;
+    width: 100%;
    padding: 15px;
-   border-radius: 0px 0px 20px ;
+   border-radius: 0px 0px 20px;
+   /* margin: 20px !important; */
 }
 
 button {
@@ -249,8 +250,20 @@ button:active {
 	background: #222;
 }
  body.dark #container{
-	background: #222;
-	border: 2px solid gold;
+	position: relative;
+	display: flex;
+	max-width: 450px;
+	width: 100%;
+	height: 680px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 5px 5px 12px rgba(0, 0, 0, .16);
+   border-radius: 20px;
+   overflow: hidden;
+   background: #222;
+   padding: 10px 30px;
+   border: 2px solid gold;
 }
  body.dark h2{
 	color: #fff
@@ -265,7 +278,7 @@ button:active {
 	flex-direction: column;
 	justify-content: center;
 	max-width: 500px;
-	width: 84%;
+	width: 100%;
 	text-align: end;
 	padding: 10px;
     margin: 0 auto;
@@ -323,8 +336,8 @@ body.dark #display {
 /* sun & moon icon start */
  body #container .icons i{
 	position: absolute;
-	right: 40px;
-	top: 8px;
+	right: 0;
+	top: 5px;
 	height: 30px;
 	width: 30px;
 	background: #222;
@@ -338,8 +351,8 @@ body.dark #display {
 
    body.dark  #container .icons i{
 	position: absolute;
-	right: 40px;
-	top: 8px;
+	right: 0;
+	top: 5px;
 	height: 30px;
 	width: 30px;
 	background: #fff;
@@ -369,7 +382,32 @@ body.dark #display {
 
 
   /* media query start */
-  
+  @media screen and (max-width: 1024px){
+	#container {
+		position: relative;
+		display: flex;
+		max-width: 450px;
+		width: 100%;
+		height: 540px !important;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		box-shadow: 5px 5px 12px rgba(0, 0, 0, .16);
+	   border-radius: 20px;
+	   overflow: hidden;
+	   background: #ecf0f3;
+	}button{
+		height: 40px;
+	}body.dark button{
+		height: 40px;
+	}
+	h2{
+		font-size: 25px;
+	}#egual{
+		height: 50px !important;
+	}
+
+	}
   @media screen and (max-width: 480px){
 	 body{
 		width: 100%;
@@ -380,8 +418,6 @@ body.dark #display {
 		line-height: 30px;
 		width: 30px;
 		font-size: 15px;
-		right: 20px;
-		
 	}#icon svg {
 		top: 13px;
 		height: 26px;
@@ -391,13 +427,11 @@ body.dark #display {
 		line-height: 30px;
 		width: 30px;
 		font-size: 15px;
-		right: 20px;
 	}body.dark #icon svg {
 		top: 13px;
 		height: 26px;
 	}
 	#keys {
-		background-color: #ecf0f3;
 		display: grid;
 		grid-template-columns: auto auto auto auto;
 		justify-content: center;
@@ -407,15 +441,15 @@ body.dark #display {
 	    border-radius: 0px 0px 20px;
 		margin-top: 4px;
 		margin-bottom: 15px;
+	}#output{
+		width: 100% !important;
 	}
 	button{
-		width: 70px;
-		height: 60px;
-		margin: 8x;
+		height: 40px;
+		width: 60px;
 	}body.dark button{
-		width: 70px;
-		height: 60px;
-		margin: 8x;
+		height: 40px;
+		width: 60px;
 	}
 	#egual{
 		width: 70px;
@@ -424,29 +458,24 @@ body.dark #display {
 		width: 92%;
 	}#output{
 		width: 92%;
-	}h2{
-		padding-left: 18px;
 	}
 	
   }
-  @media screen and (max-width: 394px){
-	body{
+  @media screen and (max-width: 391px){
+body{
 	   width: 100%;
-   }
-
-   button{
-	   width: 60px;
-	   height: 60px;
-	   margin: 8x;
-   }body.dark button{
+}
+button{
 	width: 60px;
-	height: 60px;
-	margin: 8x;
-}#output{
-	width: 88%;
+}body.dark button{
+	width: 60px;
+}
+
+#output{
+	width: 100%;
 }
 body.dark #output{
-	width: 88%;
+	width: 100%;
 }
    #egual{
 	   width: 60px;
@@ -455,18 +484,18 @@ body.dark #output{
    
  }
   @media screen and (max-width: 376px){
-	#container{
-		height: 95vh;
+	#keys{
+		height: 300px;
 	}
-	
 	body #container .icons i{
-		right: 19px;
+		right: 0;
+		top: 6px;
 		height: 25px;
 		line-height: 25px;
 		width: 25px;
 		font-size: 12px;
 	}body.dark #container .icons i{
-		right: 19px;
+		right: 0;
 		height: 25px;
 		line-height: 25px;
 		width: 25px;
@@ -483,25 +512,20 @@ body.dark #output{
 		height: 26px;
 	}
 	#keys {
-		background-color: #ecf0f3;
 		display: grid;
 		grid-template-columns: auto auto auto auto;
 		justify-content: center;
-		grid-column-gap: 4px;
-		height: 480px;
+		grid-column-gap: 1px;
+		height: 400px;
 		width: 100%;
-	    padding: 10px;
+	    padding: 5px;
 	    border-radius: 0px 0px 20px;
 		margin-top: 13px;
 	}
 	button{
-		width: 60px;
-		height: 43px;
-		margin: 8px;
+		height: 45px !important;
 	}body.dark button{
-		width: 60px;
-		height: 43px;
-		margin: 8px;
+		height: 45px !important;
 	}
 	#egual{
 		width: 60px;
@@ -524,8 +548,9 @@ body.dark #output{
 		padding-right: 20px;
 	}
 	h2{
-		font-size: 1.7rem;
-		padding-left: 18px;
+		 position: relative;
+		font-size: 1.4rem;
+		padding: 0;
 		
 	}
   }
@@ -555,10 +580,17 @@ body.dark #output{
  }
 	
   
-  @media screen and (max-width: 281px){
+  @media screen and (max-width: 280px){
 	#container{
 		width: 100%;
-	}#egual{
+		height: 470px !important;
+		padding: 15px;
+	}body.dark #container{
+		width: 100%;
+		height: 470px !important;
+		padding: 15px;
+	}
+	#egual{
 	font: bold 1em "Segoe UI";
 	    width: 37px;
 		height: 40px;
@@ -567,33 +599,42 @@ body.dark #output{
 
 	}#previuos{
 		font-size: 13px;
+	}body.dark #previuos{
+		font-size: 13px;
 	}
 	#display{
 		padding: 6px;
 		font-size: 17px;
 		padding-right: 20px;
-	}body.dark #output{
-		height: 58px;
-
-	}body.dark #previuos{
-		font-size: 13px;
-	}
-	body.dark #display{
+	}body.dark #display{
 		padding: 6px;
 		font-size: 17px;
 		padding-right: 20px;
-		overflow-x: scroll;
+	}
+	body.dark #output{
+		height: 58px;
+
 	}
 	h2{
 		font-size: 25px;
-		margin-top: 10px;
+		/* margin-top: 10px; */
 		margin-bottom: 10px;
 		height: 40px;
 		line-height: 40px;
-		font-size: 22px;
+		font-size: 20px;
 		font-weight: 600;
 		color: #000;
-	} body #container .icons i{
+	}body.dark h2{
+		font-size: 25px;
+		/* margin-top: 10px; */
+		margin-bottom: 10px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 20px;
+		font-weight: 600;
+		color: #fff;
+	}
+	 body #container .icons i{
 		height: 20px;
 		line-height: 20px;
 		width: 20px;
@@ -621,17 +662,22 @@ body.dark #output{
 	  #keys{
 		margin-bottom: 0;
 		margin-top: 0;
+		height: 400px;
+		background: none;
+	  }
+	  body.dark #keys{
+		margin-bottom: 0;
+		margin-top: 0;
+		height: 400px;
 	  }
 	  body.dark button{
 		width: 38px;
-		height: 38px;
-		margin: 8px;
+		height: 38px !important;
 		font-size: 12px;
 	  }
 	  button{
 		width: 38px;
-		height: 38px;
-		margin: 8px;
+		height: 38px !important;
 		font-size: 12px;
 	  }#history{
 		font-size: 12px;
